@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --neutral-900: #2e1401;
+  --neutral-600: #6d5b4d;
+  --neutral-100: #f7f3f0;
+  --neutral-0: #ffffff;
+
+  --yellow-500: #f8cb46;
+
+  --blue-400: #92adeb;
+  --blue-600: #5072c7;
+
+  --teal-400: #47d9c9;
+
+  --pink-400: #fc8ae5;
+  --pink-500: #f073a3;
+  --pink-700: #e11966;
+}
+
+/* Simple utility classes */
+.neutral-900 {
+  color: var(--neutral-900);
+}
+.neutral-600 {
+  color: var(--neutral-600);
+}
+.neutral-100 {
+  color: var(--neutral-100);
+}
+.neutral-0 {
+  color: var(--neutral-0);
+}
+
+.yellow-500 {
+  color: var(--yellow-500);
+}
+
+.blue-400 {
+  color: var(--blue-400);
+}
+.blue-600 {
+  color: var(--blue-600);
+}
+
+.teal-400 {
+  color: var(--teal-400);
+}
+
+.pink-400 {
+  color: var(--pink-400);
+}
+.pink-500 {
+  color: var(--pink-500);
+}
+.pink-700 {
+  color: var(--pink-700);
+}
+@layer utilities {
+  /* Preset 1 */
+  .text-preset-1 {
+    font-size: 40px;
+    line-height: 120%;
+    font-weight: 700;
+  }
+  .text-preset-1-tablet {
+    font-size: 32px;
+    line-height: 120%;
+    font-weight: 700;
+  }
+  .text-preset-1-mobile {
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 700;
+  }
+
+  /* Preset 2 */
+  .text-preset-2 {
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 600;
+  }
+
+  /* Preset 3 */
+  .text-preset-3 {
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 600;
+  }
+
+  /* Preset 4 */
+  .text-preset-4-semibold {
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: 600;
+  }
+  .text-preset-4-medium {
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: 500;
+  }
+  .text-preset-4 {
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
+  }
+
+  /* Preset 5 */
+  .text-preset-5-medium {
+    font-size: 14px;
+    line-height: 140%;
+    font-weight: 500;
+  }
+  .text-preset-5 {
+    font-size: 14px;
+    line-height: 140%;
+    font-weight: 400;
+  }
+
+  /* Preset 6 */
+  .text-preset-6 {
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: -0.03em; /* fixed from -3% */
+    font-weight: 500;
+  }
+}
+
+.tab {
+  @apply px-3 py-2 rounded-full  transition-all duration-200;
+}
+
+.tab-active {
+  @apply bg-[var(--yellow-500)] text-[var(--neutral-900)] shadow-md outline-2;
+}
+
+.tab-not-active {
+  @apply bg-transparent text-[var(--neutral-900)];
+}
